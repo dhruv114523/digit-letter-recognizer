@@ -3,6 +3,7 @@ import os
 import tensorflow as tf
 import torchvision
 import torch
+from torchvision.transforms import functional as F
 from sklearn.metrics import classification_report, confusion_matrix, precision_score, recall_score, f1_score
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -36,6 +37,22 @@ Y_train = np.array([train_dataset[i][1] for i in range(len(train_dataset))])
 
 X_test = np.array([test_dataset[i][0].squeeze() for i in range(len(test_dataset))])
 Y_test = np.array([test_dataset[i][1] for i in range(len(test_dataset))])
+
+# Apply EMNIST orientation correction: rotate -90° and horizontal flip
+print("Applying EMNIST orientation correction...")
+X_train_corrected = []
+for img in X_train:
+    img_tensor = torch.tensor(img).unsqueeze(0)  # Add channel dimension
+    corrected = F.hflip(F.rotate(img_tensor, -90))
+    X_train_corrected.append(corrected.squeeze().numpy())
+X_train = np.array(X_train_corrected)
+
+X_test_corrected = []
+for img in X_test:
+    img_tensor = torch.tensor(img).unsqueeze(0)  # Add channel dimension
+    corrected = F.hflip(F.rotate(img_tensor, -90))
+    X_test_corrected.append(corrected.squeeze().numpy())
+X_test = np.array(X_test_corrected)
 
 print(f"Training samples: {X_train.shape[0]}")
 print(f"Test samples: {X_test.shape[0]}")
@@ -153,6 +170,4 @@ print("\n" + "="*60)
 print("EMNIST TRAINING COMPLETE!")
 print("="*60)
 print(f"Final Accuracy: {accuracy*100:.2f}%")
-print("Note: EMNIST is significantly harder than MNIST")
-print("Typical EMNIST accuracies range from 75-85% for this architecture")
 print("="*60)
