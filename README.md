@@ -78,8 +78,6 @@ digit_recognizer/
 └── requirements.txt          # Python dependencies
 ```
 
-*Note: Model files (`*.keras`, `*.h5`) and dataset (`data/`) are excluded from Git due to size.*
-
 ## 🎮 Usage Examples
 
 ### Loading the Trained Model
@@ -113,14 +111,6 @@ The model performs well across all character types:
 - O vs 0 (letter O vs digit zero)
 - I vs l vs 1 (uppercase I vs lowercase l vs digit one)
 - Similar shaped letters (e.g., C vs G, P vs R)
-
-## 🔄 Future Enhancements
-
-- **Web Interface**: Upload images for text extraction
-- **API Development**: REST endpoints for integration
-- **Mobile App**: Camera-based character recognition
-- **Word Segmentation**: Full document text extraction
-- **Model Optimization**: Quantization for edge deployment
 
 ## 🛠️ Technical Details
 
