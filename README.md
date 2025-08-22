@@ -4,11 +4,11 @@ A neural network-based character recognition system that can identify **47 diffe
 
 ## 🎯 Project Overview
 
-This project implements a deep learning solution for handwritten character recognition, achieving **85.23% accuracy** on a challenging 47-class classification problem. Unlike simple digit-only recognizers, this model can handle letters, numbers, and symbols, making it suitable for real-world document processing applications.
+This project implements a deep learning solution for handwritten character recognition, achieving **85.39% accuracy** on a challenging 47-class classification problem. Unlike simple digit-only recognizers, this model can handle letters, numbers, and symbols, making it suitable for real-world document processing applications.
 
 ## 🏆 Performance Metrics
 
-- **Test Accuracy**: 85.23%
+- **Test Accuracy**: 85.39%
 - **Top-5 Accuracy**: 98.99%
 - **Classes**: 47 (26 uppercase letters + 10 digits + 11 symbols)
 - **Training Samples**: 112,800
@@ -64,7 +64,7 @@ Test samples: 18800
 Image shape: (28, 28) (28x28 grayscale)
 Number of classes: 47
 
-Final Accuracy: 85.23%
+Final Accuracy: 85.39%
 Top-5 Accuracy: 98.99%
 ```
 
@@ -137,4 +137,4 @@ The model performs well across all character types:
 | Model Type | Classes | Accuracy | Notes |
 |------------|---------|----------|--------|
 | Basic MNIST (done previously) | 10 digits | ~97% | Simple digit recognition |
-| **This Project** | **47 chars** | **85.23%** | **Full character recognition** |
+| **This Project** | **47 chars** | **85.39%** | **Full character recognition** |
