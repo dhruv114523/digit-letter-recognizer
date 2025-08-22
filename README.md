@@ -138,3 +138,10 @@ The model performs well across all character types:
 |------------|---------|----------|--------|
 | Basic MNIST (done previously) | 10 digits | ~97% | Simple digit recognition |
 | **This Project** | **47 chars** | **85.39%** | **Full character recognition** |
+
+## Future improvements
+
+- Increasing accuracy to +90%
+- Introduce Web Interface for document upload and automatic text recognition
+- GPU acceleration
+- Multi-Language Support
