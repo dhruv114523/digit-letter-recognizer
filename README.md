@@ -146,30 +146,5 @@ The model performs well across all character types:
 
 | Model Type | Classes | Accuracy | Notes |
 |------------|---------|----------|--------|
-| Basic MNIST | 10 digits | ~97% | Simple digit recognition |
+| Basic MNIST (done previously) | 10 digits | ~97% | Simple digit recognition |
 | **This Project** | **47 chars** | **85.23%** | **Full character recognition** |
-| Human Performance | 47 chars | ~95% | Estimated for comparison |
-
-## 🤝 Contributing
-
-This is a personal learning project, but suggestions and improvements are welcome! Feel free to:
-- Report issues with the training process
-- Suggest architectural improvements
-- Share ideas for new features
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🎓 Learning Outcomes
-
-Building this project demonstrates:
-- **Deep Learning**: Neural network architecture design
-- **Data Engineering**: Large dataset handling and preprocessing
-- **Model Evaluation**: Comprehensive performance analysis
-- **Framework Integration**: PyTorch + TensorFlow workflow
-- **Production Considerations**: Model saving and deployment preparation
-
----
-
-*Built with ❤️ for learning and exploring the fascinating world of computer vision and machine learning.*
