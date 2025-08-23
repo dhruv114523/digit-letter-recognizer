@@ -118,7 +118,6 @@ The model performs well across all character types:
 - **EMNIST-Balanced**: Extended MNIST with letters and symbols
 - **Image Size**: 28×28 pixels, grayscale
 - **Normalization**: Pixel values scaled to [0, 1]
-- **Data Augmentation**: Built-in through diverse handwriting styles
 
 ### Training Configuration
 - **Epochs**: 20
