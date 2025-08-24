@@ -1,10 +1,10 @@
 # Digit + Letter Recognizer
 
-A neural network-based character recognition system that can identify **47 different characters** including digits (0-9), uppercase letters (A-Z), and common symbols. Built with TensorFlow and trained on the EMNIST-Balanced dataset.
+A neural network-based character recognition system that can identify **47 different characters** including digits (0-9), uppercase letters (A-Z), and some lowecase letters. Built with TensorFlow and trained on the EMNIST-Balanced dataset.
 
 ## 🎯 Project Overview
 
-This project implements a deep learning solution for handwritten character recognition, achieving **85.38% accuracy** on a challenging 47-class classification problem. Unlike simple digit-only recognizers, this model can handle letters, numbers, and symbols, making it suitable for real-world document processing applications.
+This project implements a deep learning solution for handwritten character recognition, achieving **85.38% accuracy** on a challenging 47-class classification problem. Unlike simple digit-only recognizers, this model can handle letters and numbers, making it suitable for real-world document processing applications.
 
 ## 🏆 Performance Metrics
 
@@ -73,12 +73,7 @@ Training samples: 112800
 Test samples: 18800
 Image shape: (28, 28) (28x28 grayscale)
 Number of classes: 47
-
-<<<<<<< HEAD
 Final Accuracy: 85.38%
-=======
-Final Accuracy: 85.39%
->>>>>>> ee442c83705fa83ec86a0f14e18d268c6ed1628d
 Top-5 Accuracy: 98.99%
 ```
 
@@ -146,14 +141,12 @@ The model performs well across all character types:
 ## 🛠️ Technical Details
 
 ### Dataset
-- **EMNIST-Balanced**: Extended MNIST with letters and symbols
+- **EMNIST-Balanced**: Extended MNIST with letters
 - **Image Size**: 28×28 pixels, grayscale
 - **Normalization**: Pixel values scaled to [0, 1]
-<<<<<<< HEAD
 - **Orientation Correction**: -90° rotation + horizontal flip applied
 - **Character Set**: 10 digits + 26 uppercase + 11 lowercase letters
 =======
->>>>>>> ee442c83705fa83ec86a0f14e18d268c6ed1628d
 
 ### Training Configuration
 - **Epochs**: 20
@@ -175,14 +168,8 @@ The model performs well across all character types:
 
 | Model Type | Classes | Accuracy | Notes |
 |------------|---------|----------|--------|
-<<<<<<< HEAD
 | Basic MNIST | 10 digits | ~97% | Simple digit recognition |
 | **This Project** | **47 chars** | **85.38%** | **Full character recognition** |
-| Human Performance | 47 chars | ~95% | Estimated for comparison |
-=======
-| Basic MNIST (done previously) | 10 digits | ~97% | Simple digit recognition |
-| **This Project** | **47 chars** | **85.39%** | **Full character recognition** |
->>>>>>> ee442c83705fa83ec86a0f14e18d268c6ed1628d
 
 ## Future improvements
 
