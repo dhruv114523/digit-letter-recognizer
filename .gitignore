@@ -1,78 +1,27 @@
-# Model files - too large for GitHub
 *.h5
 *.keras
 *.pkl
-*.joblib
 
-# Dataset files - too large and can be re-downloaded
 data/
 datasets/
-*.zip
-*.gz
-*.tar
-*.rar
 
-# Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
-# Virtual environments
+.venv/
 venv/
 env/
-ENV/
-env.bak/
-venv.bak/
-.venv
 
-# IDE
 .vscode/
 .idea/
-*.swp
-*.swo
-*~
 
-# Jupyter Notebook
-.ipynb_checkpoints
+.ipynb_checkpoints/
 
-# System files
 .DS_Store
 Thumbs.db
+
+*.tmp
 *.log
 
-# Temporary files
-*.tmp
-*.temp
-temp/
-tmp/
-
-# Images (if you add test images later)
-*.jpg
-*.jpeg
-*.png
-*.bmp
-*.tiff
-*.gif
-
-# Old/unused directories
 Digit-Recognizer/
