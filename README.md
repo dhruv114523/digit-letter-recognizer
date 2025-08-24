@@ -74,7 +74,11 @@ Test samples: 18800
 Image shape: (28, 28) (28x28 grayscale)
 Number of classes: 47
 
+<<<<<<< HEAD
 Final Accuracy: 85.38%
+=======
+Final Accuracy: 85.39%
+>>>>>>> ee442c83705fa83ec86a0f14e18d268c6ed1628d
 Top-5 Accuracy: 98.99%
 ```
 
@@ -87,8 +91,6 @@ digit_recognizer/
 ├── .gitignore                # Git ignore rules
 └── requirements.txt          # Python dependencies
 ```
-
-*Note: Model files (`*.keras`, `*.h5`) and dataset (`data/`) are excluded from Git due to size.*
 
 ## 🎮 Usage Examples
 
@@ -141,22 +143,17 @@ The model performs well across all character types:
 - **F vs f** (case confusion caused by orientation correction)
 - **Shape similarities**: q/9, g/9, 5/S
 
-## 🔄 Future Enhancements
-
-- **Web Interface**: Upload images for text extraction
-- **API Development**: REST endpoints for integration
-- **Mobile App**: Camera-based character recognition
-- **Word Segmentation**: Full document text extraction
-- **Model Optimization**: Quantization for edge deployment
-
 ## 🛠️ Technical Details
 
 ### Dataset
 - **EMNIST-Balanced**: Extended MNIST with letters and symbols
 - **Image Size**: 28×28 pixels, grayscale
 - **Normalization**: Pixel values scaled to [0, 1]
+<<<<<<< HEAD
 - **Orientation Correction**: -90° rotation + horizontal flip applied
 - **Character Set**: 10 digits + 26 uppercase + 11 lowercase letters
+=======
+>>>>>>> ee442c83705fa83ec86a0f14e18d268c6ed1628d
 
 ### Training Configuration
 - **Epochs**: 20
@@ -178,30 +175,18 @@ The model performs well across all character types:
 
 | Model Type | Classes | Accuracy | Notes |
 |------------|---------|----------|--------|
+<<<<<<< HEAD
 | Basic MNIST | 10 digits | ~97% | Simple digit recognition |
 | **This Project** | **47 chars** | **85.38%** | **Full character recognition** |
 | Human Performance | 47 chars | ~95% | Estimated for comparison |
+=======
+| Basic MNIST (done previously) | 10 digits | ~97% | Simple digit recognition |
+| **This Project** | **47 chars** | **85.39%** | **Full character recognition** |
+>>>>>>> ee442c83705fa83ec86a0f14e18d268c6ed1628d
 
-## 🤝 Contributing
+## Future improvements
 
-This is a personal learning project, but suggestions and improvements are welcome! Feel free to:
-- Report issues with the training process
-- Suggest architectural improvements
-- Share ideas for new features
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-
-## 🎓 Learning Outcomes
-
-Building this project demonstrates:
-- **Deep Learning**: Neural network architecture design
-- **Data Engineering**: Large dataset handling and preprocessing
-- **Model Evaluation**: Comprehensive performance analysis
-- **Framework Integration**: PyTorch + TensorFlow workflow
-- **Production Considerations**: Model saving and deployment preparation
-
----
-
-*Built with ❤️ for learning and exploring the fascinating world of computer vision and machine learning.*
+- Increasing accuracy to +90%
+- Introduce Web Interface for document upload and automatic text recognition
+- GPU acceleration
+- Multi-Language Support
