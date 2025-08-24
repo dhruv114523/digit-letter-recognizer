@@ -8,6 +8,11 @@ from sklearn.metrics import classification_report, confusion_matrix, precision_s
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+# Set seeds for reproducibility
+random.seed(123)
+np.random.seed(123)
+tf.random.set_seed(123)
+
 print("Loading EMNIST-Balanced dataset...")
 
 # EMNIST-Balanced class mapping function
