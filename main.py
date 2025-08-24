@@ -10,6 +10,27 @@ import seaborn as sns
 
 print("Loading EMNIST-Balanced dataset...")
 
+# EMNIST-Balanced class mapping function
+def get_emnist_mapping():
+    """Create mapping from class indices to character labels"""
+    # Based on actual EMNIST-Balanced dataset classes
+    classes = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+               'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+               'a', 'b', 'd', 'e', 'f', 'g', 'h', 'n', 'q', 'r', 't']
+    
+    mapping = {}
+    for i, char in enumerate(classes):
+        mapping[i] = char
+    
+    return mapping
+
+def decode_class(class_idx, mapping):
+    """Convert class index to character"""
+    return mapping.get(class_idx, f'class_{class_idx}')
+
+# Create character mapping
+char_mapping = get_emnist_mapping()
+
 # Load data
 transform = torchvision.transforms.Compose([
     torchvision.transforms.ToTensor(),
@@ -128,7 +149,8 @@ f1 = f1_score(Y_test, Y_pred_classes, average=None, zero_division=0)
 print("Per-Class Metrics (showing first 20 classes):")
 print("-" * 50)
 for class_idx in range(min(20, len(precision))):
-    print(f"Class {class_idx:2d}: Precision={precision[class_idx]:.4f}, Recall={recall[class_idx]:.4f}, F1={f1[class_idx]:.4f}")
+    char = decode_class(class_idx, char_mapping)
+    print(f"Class {class_idx:2d} ({char}): Precision={precision[class_idx]:.4f}, Recall={recall[class_idx]:.4f}, F1={f1[class_idx]:.4f}")
 
 if len(precision) > 20:
     print(f"... and {len(precision) - 20} more classes")
@@ -164,7 +186,9 @@ for i in range(cm.shape[0]):
 # Sort by confusion count
 confusion_pairs.sort(key=lambda x: x[2], reverse=True)
 for i, (true_class, pred_class, count) in enumerate(confusion_pairs[:10]):
-    print(f"{i+1:2d}. True: {true_class:2d} → Predicted: {pred_class:2d} ({count:4d} times)")
+    true_char = decode_class(true_class, char_mapping)
+    pred_char = decode_class(pred_class, char_mapping)
+    print(f"{i+1:2d}. True: {true_char} ({true_class:2d}) → Predicted: {pred_char} ({pred_class:2d}) ({count:4d} times)")
 
 print("\n" + "="*60)
 print("EMNIST TRAINING COMPLETE!")
