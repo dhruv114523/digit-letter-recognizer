@@ -1,6 +1,6 @@
 # Digit + Letter Recognizer
 
-A neural network-based character recognition system that can identify **47 different characters** including digits (0-9), uppercase letters (A-Z), and some lowecase letters. Built with TensorFlow and trained on the EMNIST-Balanced dataset.
+A neural network-based character recognition system that can identify **47 different characters** including digits (0-9), uppercase letters (A-Z), and some lowercase letters. Built with TensorFlow and trained on the EMNIST-Balanced dataset.
 
 ## 🎯 Project Overview
 
