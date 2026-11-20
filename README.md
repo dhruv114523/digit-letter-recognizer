@@ -7,6 +7,14 @@ digits, uppercase letters, and selected lowercase letters. It uses the
 47-class EMNIST-Balanced dataset to provide a compact OCR starting point for
 experiments and document-processing applications.
 
+## Frameworks
+
+The project uses both PyTorch and TensorFlow for practical reasons. TensorFlow
+is used for the model, training, and evaluation, while PyTorch's
+`torchvision.datasets.EMNIST` is used to download and load the data. TensorFlow
+data loading caused problems in this project, so the data pipeline was switched
+to PyTorch while the rest of the workflow remained in TensorFlow.
+
 ## Results
 
 - Test accuracy: **85.38%**
